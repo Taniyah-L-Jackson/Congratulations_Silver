@@ -7,7 +7,6 @@ body {
     height: 100vh; /*allows color to stretch across page the viewport of the page rather than the body*/
     background: linear-gradient(45deg, #808080, #d3d2d2, #808080);
     color: #535353;
-    overflow: hidden; /*prevents scrollbar from appearing*/
 }
 
 .box {
@@ -79,3 +78,30 @@ body {
 }
 
 /* the 0.5 difference keeps the boxes closer together when moving */
+
+/* Boxes differ in size based on screen size */
+@media (max-width: 768px) {
+    .smallBoxA {
+        height: 200px;
+        width: 220px;
+        left: -305px;
+        font-size: 60px;
+        line-height: 3.5;
+    }
+    
+    .smallBoxB {
+        height: 200px;
+        width: 200px;
+        left: -85px;
+        font-size: 60px;
+        line-height: 3.5;
+    }
+    
+    .smallBoxC {
+        height: 200px;
+        width: 200px;
+        left: 115px;
+        font-size: 60px;
+        line-height: 3.5;
+    }		
+}
