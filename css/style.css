@@ -1,0 +1,81 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+body {
+    height: 100vh; /*allows color to stretch across page the viewport of the page rather than the body*/
+    background: linear-gradient(45deg, #808080, #d3d2d2, #808080);
+    color: #535353;
+    overflow: hidden; /*prevents scrollbar from appearing*/
+}
+
+.box {
+    position: relative; /*absolute child boxes stay within width and height of relative parent box*/
+    margin: 200px auto 0; /*appears in center of page*/
+    display: inline-block; /*boxes are side by side*/
+}
+
+.drop {
+    /* shows boxes bouncing infinitely */
+    animation-name: fall;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* child boxes dont appear until animation runs */
+.smallBoxA {
+    position: absolute;
+    top: -600px;
+    left: -400px;
+    height: 300px;
+    width: 260px;
+    font-size: 70px;
+    background:#C0C0C0;
+    line-height: 4;
+    animation-duration: 4s;
+}
+
+.smallBoxB {
+    position: absolute;
+    top: -600px;
+    left: -140px;
+    height: 300px;
+    width: 240px;
+    font-size: 70px;
+    background:#C0C0C0;
+    line-height: 4;
+    animation-delay: 0.5s;
+    animation-duration: 4s;
+}
+
+.smallBoxC {
+    position: absolute;
+    top: -600px;
+    left: 93px;
+    height: 300px;
+    width: 240px;
+    font-size: 70px;
+    background:#C0C0C0;
+    line-height: 4;
+    animation-delay: 1s;
+    animation-duration: 4s;
+}
+
+
+@keyframes fall {
+    50% {
+        /* appears on page, on bounce, a breif background color change and a box shadow to show falling */
+        top: 20px;
+        background: white;
+        box-shadow: 1px 1px 10px black;
+    }
+
+    100% {
+        /* Disappears off-page again */
+        top: -600px;
+    }
+}
+
+/* the 0.5 difference keeps the boxes closer together when moving */
