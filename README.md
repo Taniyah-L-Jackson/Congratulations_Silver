@@ -1,5 +1,5 @@
 # Congratulations_Silver
-A Celebratory Webpage (Silver Edition)
+A Celebratory Webpage! (Silver Edition)
 
 # Features:
 * 'Bouncing' blocks that change color and add shadow while falling and bouncing towards top
