@@ -6,3 +6,4 @@ A Celebratory Webpage! (Silver Edition)
 * Silver-Styled gradient background
 
 ```Built with HTML & CSS```
+```For Moblie Users, Please Rotate Device```
